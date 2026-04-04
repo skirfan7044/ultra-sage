@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | UltraSage Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="mainlogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon bg-white rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Get In <span class="text-orange">Touch</span></h1>
+    <p>Have questions about our certification programs? We're here to help you start your journey.</p>
+  </div>
+</section>
+
+<!-- Contact Info Cards -->
+<section class="container mt-5 pt-4">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4>Visit Us</h4>
+        <p>OM Tower, Unit No. 706, 7th Floor</p>
+        <p>Shakespear Sarani, Park Street</p>
+        <p>Kolkata 700071</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h4>Call Us</h4>
+        <p>+91 7980577946</p>
+        <p>+91 9836345682</p>
+        <p class="mt-2"><i class="fab fa-whatsapp text-orange me-1"></i> WhatsApp: +91 7980577946</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h4>Email Us</h4>
+        <p>info@ultrasage.in</p>
+        <p>support@ultrasage.in</p>
+        <p class="mt-2"><small>Response within 24 hours</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form & Map Section -->
+<section class="container my-5 py-4">
+  <div class="row g-5">
+    <!-- Contact Form -->
+    <div class="col-lg-7">
+      <div class="form-container">
+        <h3><i class="fas fa-pen-alt text-orange me-2"></i> Send us a Message</h3>
+        <p class="text-muted mb-4">Fill out the form below and our team will get back to you within 24 hours.</p>
+        
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Full Name *</label>
+              <input type="text" class="form-control" id="fullName" required placeholder="John Doe">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Email Address *</label>
+              <input type="email" class="form-control" id="email" required placeholder="john@example.com">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXXXXXXX">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Select Certification *</label>
+              <select class="form-select" id="certification">
+                <option value="">-- Choose a program --</option>
+                <option>Microsoft Certified Fundamentals</option>
+                <option>MOS 2016 / 2019</option>
+                <option>Adobe Certified Professional</option>
+                <option>Power BI Data Analyst</option>
+                <option>Data Analysis Using R</option>
+                <option>Cisco CCST (Networking/Cybersecurity)</option>
+                <option>Unity Certified User</option>
+                <option>PMI Project Management Ready</option>
+                <option>Not sure / Need guidance</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold">Message *</label>
+              <textarea class="form-control" id="message" rows="4" required placeholder="Tell us about your goals, questions, or any specific requirements..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane me-2"></i> Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <!-- Success Alert (hidden initially) -->
+        <div id="successAlert" class="alert alert-success mt-4" style="display: none; border-radius: 16px;">
+          <i class="fas fa-check-circle me-2"></i> Thank you for reaching out! Our team will contact you shortly.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Map & Hours -->
+    <div class="col-lg-5">
+      <div class="map-placeholder mb-4">
+        <i class="fas fa-map"></i>
+        <div class="map-overlay">
+          <i class="fas fa-location-dot text-orange me-1"></i> Park Street, Kolkata
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-4 p-4 shadow-sm">
+        <h4 class="fw-bold mb-3"><i class="fas fa-clock text-orange me-2"></i> Office Hours</h4>
+        <div class="d-flex justify-content-between py-2 border-bottom">
+          <span>Monday - Friday</span>
+          <span class="fw-semibold">10:00 AM - 7:00 PM</span>
+        </div>
+        <div class="d-flex justify-content-between py-2 border-bottom">
+          <span>Saturday</span>
+          <span class="fw-semibold">10:00 AM - 4:00 PM</span>
+        </div>
+        <div class="d-flex justify-content-between py-2">
+          <span>Sunday</span>
+          <span class="fw-semibold">Closed</span>
+        </div>
+        <hr>
+        <div class="mt-3">
+          <h5 class="fw-semibold"><i class="fas fa-hashtag text-orange me-2"></i> Quick Connect</h5>
+          <a href="https://wa.link/y7tf9x" class="btn btn-outline-orange w-100 mt-2" target="_blank">
+            <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Frequently Asked <span class="text-orange">Questions</span></h2>
+    <p class="text-muted">Find quick answers to common queries</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+        <i class="fas fa-question-circle text-orange mb-2 fs-3"></i>
+        <h5>How do I enroll for a certification?</h5>
+        <p class="text-muted">Simply fill out the contact form or give us a call. Our counselors will guide you through the enrollment process and help you choose the right program.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+        <i class="fas fa-question-circle text-orange mb-2 fs-3"></i>
+        <h5>Are these certifications recognized globally?</h5>
+        <p class="text-muted">Yes! All our certifications are from global leaders like Microsoft, Adobe, Cisco, Unity, and PMI, recognized by employers worldwide.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+        <i class="fas fa-question-circle text-orange mb-2 fs-3"></i>
+        <h5>Do you offer online training?</h5>
+        <p class="text-muted">Yes, we offer both classroom and online training options with flexible schedules to suit your needs.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+        <i class="fas fa-question-circle text-orange mb-2 fs-3"></i>
+        <h5>Is there any placement assistance?</h5>
+        <p class="text-muted">Absolutely! We provide placement assistance, resume building, and mock interview sessions to help you land your dream job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="container my-5">
+  <div style="background: linear-gradient(135deg, var(--dark-blue) 0%, #0f2b4d 100%); border-radius: 32px; padding: 50px 30px; text-align: center; color: white;">
+    <h2 class="fw-bold mb-3">Ready to Upgrade Your Career?</h2>
+    <p class="mb-4 opacity-75">Get certified and stand out in the competitive job market</p>
+    <a href="certifications.html" class="btn-orange px-5 py-3">Explore Certifications <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h6>UltraSage Learning</h6>
+        <p class="small">Empowering careers through global tech certifications since 2018.</p>
+        <p class="small mb-0">&copy; 2026 UltraSage Learning. All rights reserved.</p>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p class="small mb-1">OM Tower, Unit 706, 7th Floor<br>Shakespear Sarani, Park Street<br>Kolkata 700071</p>
+        <p class="small">+91 7980577946 | info@ultrasage.in</p>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mt-2">
+          <a href="https://wa.link/y7tf9x" class="text-white-50 me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+          <a href="#" class="text-white-50"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function handleSubmit(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const certification = document.getElementById('certification').value;
+    
+    // Simple validation
+    if (!name || !email) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Show success message
+    const successAlert = document.getElementById('successAlert');
+    successAlert.style.display = 'block';
+    
+    // Reset form
+    document.getElementById('contactForm').reset();
+    
+    // Scroll to success message
+    successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      successAlert.style.display = 'none';
+    }, 5000);
+  }
+</script>
+</body>
+</html>

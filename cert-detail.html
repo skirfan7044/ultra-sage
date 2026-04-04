@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certification Detail | UltraSage Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="UltraSage Learning" class="mainlogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon bg-white rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="certifications.html">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Dynamic Content - Populated by JavaScript -->
+<main id="dynamicContent">
+  <div class="detail-hero">
+    <div class="container">
+      <div class="hero-icon" id="heroIcon">
+        <img src="images/cert-default.png" alt="Certification Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+      </div>
+      <h1 id="certTitle">Loading...</h1>
+      <div id="certBadges" class="mt-3"></div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Overview -->
+        <div class="content-card" id="overviewSection">
+          <h2><i class="fas fa-info-circle"></i> Overview</h2>
+          <p id="overviewText">Loading certification information...</p>
+        </div>
+
+        <!-- What You'll Learn / Exams -->
+        <div class="content-card" id="examsSection">
+          <h2><i class="fas fa-list-check"></i> What You'll Learn</h2>
+          <ul class="exam-list" id="examList"></ul>
+        </div>
+
+        <!-- Skills Covered -->
+        <div class="content-card" id="skillsSection">
+          <h2><i class="fas fa-code"></i> Skills Covered</h2>
+          <div id="skillsContent"></div>
+        </div>
+
+        <!-- Career Path -->
+        <div class="content-card" id="careerSection">
+          <h2><i class="fas fa-briefcase"></i> Career Opportunities</h2>
+          <div id="careerContent"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="sidebar-card">
+          <h4><i class="fas fa-tag text-orange me-2"></i> Program Details</h4>
+          <div class="info-grid" id="infoGrid"></div>
+          <hr>
+          <div class="text-center">
+            <div class="price" id="certPrice">₹15,000 <small>+ GST</small></div>
+            <p class="text-muted small mt-2">Includes study material & exam voucher</p>
+            <a href="contact.html" class="btn-enroll w-100 justify-content-center mt-3">Enroll Now <i class="fas fa-arrow-right"></i></a>
+            <a href="certifications.html" class="btn-back w-100 justify-content-center mt-3">← Back to Certifications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h6>UltraSage Learning</h6>
+        <p class="small">Empowering careers through global tech certifications since 2018.</p>
+        <p class="small mb-0">&copy; 2026 UltraSage Learning. All rights reserved.</p>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p class="small mb-1">OM Tower, Unit 706, 7th Floor<br>Shakespear Sarani, Park Street<br>Kolkata 700071</p>
+        <p class="small">+91 7980577946 | info@ultrasage.in</p>
+        <a href="https://wa.link/y7tf9x" class="text-white-50"><i class="fab fa-whatsapp text-orange me-1"></i> WhatsApp Us</a>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Logo mapping for each certification
+  const logoMap = {
+    'microsoft-fundamentals': 'images/microsoft-logo.png',
+    'mos2016': 'images/microsoft-office-logo.png',
+    'mos2019': 'images/microsoft-365-logo.png',
+    'adobe': 'images/adobe-logo.png',
+    'powerbi': 'images/powerbi-logo.png',
+    'r-programming': 'images/r-logo.png',
+    'cisco': 'images/cisco-logo.png',
+    'unity': 'images/unity-logo.png',
+    'pmi': 'images/pmi-logo.png'
+  };
+
+  // Certification Database
+  const certifications = {
+    'microsoft-fundamentals': {
+      title: 'Microsoft Certified Fundamentals',
+      logoKey: 'microsoft-fundamentals',
+      badges: ['Azure', 'AI', 'Data', 'Security', 'Power Platform'],
+      overview: 'The Microsoft Certified Fundamentals exams are the pathway to fully understanding cloud computing, AI, and data science. This set of exams is for students exploring careers in artificial intelligence, data science, and cloud computing. With big data and AI on the rise, demand for skilled professionals is growing rapidly. Help your students get on the pathway to a prosperous career by administering Microsoft Certified Fundamentals exams in your classroom.',
+      exams: [
+        { name: 'AZ-900', title: 'Azure Fundamentals', desc: 'Cloud concepts, Azure services, pricing & support' },
+        { name: 'AI-900', title: 'Azure AI Fundamentals', desc: 'ML and AI workloads on Azure' },
+        { name: 'DP-900', title: 'Azure Data Fundamentals', desc: 'Core data concepts, relational & non-relational data' },
+        { name: 'MS-900', title: 'Microsoft 365 Fundamentals', desc: 'SaaS cloud model, Microsoft 365 offerings' },
+        { name: 'SC-900', title: 'Security & Compliance', desc: 'Microsoft security solutions' },
+        { name: 'PL-900', title: 'Power Platform Fundamentals', desc: 'Automate processes, analyze data' },
+        { name: 'MB-910/920', title: 'Dynamics 365', desc: 'CRM & ERP capabilities' }
+      ],
+      skills: 'Cloud computing concepts, AI workloads, data fundamentals, security compliance, Power Platform automation, Dynamics 365 business applications.',
+      careers: 'Cloud Administrator, AI Specialist, Data Analyst, Security Analyst, Power Platform Developer, Dynamics Consultant',
+      duration: '6-8 weeks',
+      mode: 'Online / Classroom',
+      price: '₹12,000 + GST',
+      examVoucher: 'Included'
+    },
+    'mos2016': {
+      title: 'MOS 2016',
+      logoKey: 'mos2016',
+      badges: ['Word', 'Excel', 'PowerPoint', 'Outlook', 'Access'],
+      overview: 'MOS certification gives students a commanding competitive edge in today\'s academic and professional environments. By migrating from a single large project to multiple smaller projects, we\'ve made MOS a powerful instrument for assessing student skills. Each exam validates proficiency in specific Microsoft Office applications.',
+      exams: [
+        { name: 'MOS Word 2016', title: 'Word Associate', desc: 'Document creation, formatting, collaboration' },
+        { name: 'MOS Excel 2016', title: 'Excel Associate', desc: 'Spreadsheets, formulas, charts, data analysis' },
+        { name: 'MOS PowerPoint 2016', title: 'PowerPoint Associate', desc: 'Presentations, animations, slide design' },
+        { name: 'MOS Outlook 2016', title: 'Outlook Associate', desc: 'Email management, calendar, contacts' },
+        { name: 'MOS Access 2016', title: 'Access Associate', desc: 'Database management, queries, reports' }
+      ],
+      skills: 'Word processing, spreadsheet management, presentation design, email organization, database fundamentals.',
+      careers: 'Administrative Assistant, Office Manager, Data Entry Specialist, Executive Assistant',
+      duration: '4-6 weeks',
+      mode: 'Online / Classroom',
+      price: '₹8,000 + GST',
+      examVoucher: 'Included'
+    },
+    'mos2019': {
+      title: 'Microsoft Office Specialist 2019',
+      logoKey: 'mos2019',
+      badges: ['Microsoft 365', 'Associate', 'Expert'],
+      overview: 'The Microsoft 365 Apps exams include multiple smaller projects to assess student skills within Microsoft Office. Students are tested on one project at a time, validating their understanding of Microsoft Office program functionality in real-world scenarios.',
+      exams: [
+        { name: 'Word Associate/Expert', title: 'Word 2019', desc: 'Advanced document creation and automation' },
+        { name: 'Excel Associate/Expert', title: 'Excel 2019', desc: 'Data analysis, pivot tables, advanced formulas' },
+        { name: 'PowerPoint Associate', title: 'PowerPoint 2019', desc: 'Professional presentations and animations' },
+        { name: 'Outlook Associate', title: 'Outlook 2019', desc: 'Communication and scheduling' }
+      ],
+      skills: 'Advanced word processing, data visualization, presentation mastery, email management, cloud collaboration.',
+      careers: 'Executive Assistant, Data Analyst, Office Administrator, Project Coordinator',
+      duration: '6-8 weeks',
+      mode: 'Online / Classroom',
+      price: '₹10,000 + GST',
+      examVoucher: 'Included'
+    },
+    'adobe': {
+      title: 'Adobe Certified Professional',
+      logoKey: 'adobe',
+      badges: ['Photoshop', 'Illustrator', 'Premiere Pro', 'After Effects', 'InDesign'],
+      overview: 'Adobe Certified Professional is an industry-recognized credential that effectively validates one\'s skills in Adobe Creative Cloud applications. Get certified in Visual Design, Video Editing, Motion Graphics, Web Authoring, and more.',
+      exams: [
+        { name: 'Photoshop', title: 'Visual Design', desc: 'Image editing, compositing, digital painting' },
+        { name: 'Illustrator', title: 'Graphic Design', desc: 'Vector graphics, logos, illustrations' },
+        { name: 'Premiere Pro', title: 'Digital Video', desc: 'Video editing, transitions, effects' },
+        { name: 'After Effects', title: 'Motion Graphics', desc: 'Animation, visual effects, compositing' },
+        { name: 'InDesign', title: 'Publication Design', desc: 'Print & digital layouts, typography' }
+      ],
+      skills: 'Image manipulation, vector illustration, video editing, motion graphics, layout design, web prototyping.',
+      careers: 'Graphic Designer, Video Editor, Motion Graphics Artist, UI/UX Designer, Creative Director',
+      duration: '8-10 weeks',
+      mode: 'Online / Classroom',
+      price: '₹18,000 + GST',
+      examVoucher: 'Included'
+    },
+    'powerbi': {
+      title: 'Power BI Data Analyst',
+      logoKey: 'powerbi',
+      badges: ['Business Intelligence', 'Data Visualization', 'DAX'],
+      overview: 'Candidates deliver actionable insights by working with available data and applying domain expertise. They provide meaningful business value through easy-to-comprehend data visualizations, enable others to perform self-service analytics, and deploy and configure solutions for consumption.',
+      exams: [
+        { name: 'PL-300', title: 'Power BI Data Analyst', desc: 'Data transformation, modeling, visualization' }
+      ],
+      skills: 'Power Query, DAX formulas, data modeling, interactive dashboards, Power BI Service deployment.',
+      careers: 'Business Intelligence Analyst, Data Analyst, Reporting Specialist, Analytics Consultant',
+      duration: '5-6 weeks',
+      mode: 'Online / Classroom',
+      price: '₹14,000 + GST',
+      examVoucher: 'Included'
+    },
+    'r-programming': {
+      title: 'Data Analysis Using R',
+      logoKey: 'r-programming',
+      badges: ['R Programming', 'Statistics', 'ggplot2'],
+      overview: 'Learn the end-to-end process of data analysis, including cleaning, manipulating, summarizing, describing, visualizing and analysing your data. The course includes t-test, ANOVA, chi-squared test and linear regression using built-in R datasets.',
+      exams: [],
+      skills: 'Data cleaning, statistical testing (t-test, ANOVA, regression), data visualization with ggplot2, R programming fundamentals.',
+      careers: 'Data Analyst, Statistical Analyst, Research Associate, Business Analyst',
+      duration: '6-8 weeks',
+      mode: 'Online / Classroom',
+      price: '₹13,000 + GST',
+      examVoucher: 'Not included (certification optional)'
+    },
+    'cisco': {
+      title: 'Cisco Certified Support Technician',
+      logoKey: 'cisco',
+      badges: ['Networking', 'Cybersecurity', 'CCST'],
+      overview: 'Cisco, the worldwide leader in technology that powers the Internet, has partnered with Certiport to create the CCST certification program. Two exams designed to validate work-ready skills in networking and cybersecurity.',
+      exams: [
+        { name: 'CCST Networking', title: 'Networking', desc: 'Network fundamentals, troubleshooting, infrastructure' },
+        { name: 'CCST Cybersecurity', title: 'Cybersecurity', desc: 'Security principles, threat protection, incident response' }
+      ],
+      skills: 'Network protocols, IP addressing, security concepts, threat analysis, incident handling, device configuration.',
+      careers: 'Network Support Technician, Cybersecurity Analyst, IT Support Specialist, Network Administrator',
+      duration: '8-10 weeks',
+      mode: 'Online / Classroom',
+      price: '₹20,000 + GST',
+      examVoucher: 'Included'
+    },
+    'unity': {
+      title: 'Unity Certified User',
+      logoKey: 'unity',
+      badges: ['Game Development', 'AR/VR', 'C#'],
+      overview: 'Unity is the leading content-creation platform for AR/VR, real-time 3D, and mobile 2D. The Unity Certified User certification is an entry-level credential that allows individuals to get started in interactive content creation for gaming, entertainment, automotive, and XR industries.',
+      exams: [
+        { name: 'Unity Certified User', title: 'Programmer', desc: 'C# scripting, game mechanics, scene management' }
+      ],
+      skills: 'C# programming, Unity Editor, 2D/3D game development, physics, animation, AR/VR basics.',
+      careers: 'Junior Game Developer, AR/VR Developer, Interactive Content Creator, Simulation Developer',
+      duration: '8-12 weeks',
+      mode: 'Online / Classroom',
+      price: '₹22,000 + GST',
+      examVoucher: 'Included'
+    },
+    'pmi': {
+      title: 'PMI Project Management Ready™',
+      logoKey: 'pmi',
+      badges: ['Project Management', 'Agile', 'PMI'],
+      overview: 'Project Management Institute (PMI) is the world\'s leading association for project management professionals. The PMI Project Management Ready certification introduces students to project management concepts, tools, and career paths.',
+      exams: [
+        { name: 'PMI Project Management Ready', title: 'Fundamentals', desc: 'Project lifecycle, agile methodologies, stakeholder management' }
+      ],
+      skills: 'Project initiation, planning, execution, monitoring, closure, agile frameworks, risk management, communication.',
+      careers: 'Project Coordinator, Junior Project Manager, Scrum Master, Program Assistant',
+      duration: '4-5 weeks',
+      mode: 'Online / Classroom',
+      price: '₹11,000 + GST',
+      examVoucher: 'Included'
+    }
+  };
+
+  // Get ID from URL
+  function getCertId() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+  }
+
+  // Load certification data
+  function loadCertification() {
+    const id = getCertId();
+    const cert = certifications[id];
+    
+    if (!cert) {
+      document.getElementById('dynamicContent').innerHTML = `
+        <div class="detail-hero" style="margin-top: 76px;">
+          <div class="container text-center">
+            <h1>Certification Not Found</h1>
+            <a href="certifications.html" class="btn-orange mt-4">Back to Certifications</a>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    // Set hero section with logo image
+    const logoUrl = logoMap[cert.logoKey] || 'images/cert-default.png';
+    document.getElementById('heroIcon').innerHTML = `<img src="${logoUrl}" alt="${cert.title} Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">`;
+    document.getElementById('certTitle').innerText = cert.title;
+    
+    const badgesHtml = cert.badges.map(b => `<span class="cert-badge">${b}</span>`).join('');
+    document.getElementById('certBadges').innerHTML = badgesHtml;
+    
+    // Overview
+    document.getElementById('overviewText').innerText = cert.overview;
+    
+    // Exams list
+    const examListHtml = cert.exams.map(exam => `
+      <li>
+        <i class="fas fa-check-circle"></i>
+        <strong>${exam.name}</strong>
+        <span>${exam.title} - ${exam.desc}</span>
+      </li>
+    `).join('');
+    document.getElementById('examList').innerHTML = examListHtml || '<li><i class="fas fa-info-circle"></i><span>No specific exams - hands-on project based assessment</span></li>';
+    
+    // Skills
+    document.getElementById('skillsContent').innerHTML = `<p>${cert.skills}</p>`;
+    
+    // Career
+    document.getElementById('careerContent').innerHTML = `<p>${cert.careers}</p>`;
+    
+    // Info Grid
+    const infoGridHtml = `
+      <div class="info-item"><i class="fas fa-clock"></i><div class="label">Duration</div><div class="value">${cert.duration}</div></div>
+      <div class="info-item"><i class="fas fa-laptop"></i><div class="label">Learning Mode</div><div class="value">${cert.mode}</div></div>
+      <div class="info-item"><i class="fas fa-ticket-alt"></i><div class="label">Exam Voucher</div><div class="value">${cert.examVoucher}</div></div>
+    `;
+    document.getElementById('infoGrid').innerHTML = infoGridHtml;
+    document.getElementById('certPrice').innerHTML = cert.price;
+  }
+
+  // Load on page load
+  loadCertification();
+</script>
+</body>
+</html>
