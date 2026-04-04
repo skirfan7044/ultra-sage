@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Certifications | UltraSage Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .cert-hero {
+      background: linear-gradient(135deg, #0a1a32 0%, var(--dark-blue) 100%);
+      padding: 120px 0 80px;
+      margin-top: 69px;
+      text-align: center;
+      color: white;
+    }
+    .category-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      height: 100%;
+    }
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .category-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(255,102,0,0.1) 0%, rgba(34,114,183,0.05) 100%);
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+    .category-icon i {
+      font-size: 2.5rem;
+      color: var(--orange);
+    }
+    .exam-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.2rem;
+      transition: all 0.3s;
+      border: 1px solid #eef2f6;
+    }
+    .exam-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="mainlogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon bg-white rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="certification.html">Certifications</a></li>
+              <li><a class="dropdown-item" href="astrology.html">Astrology</a></li>
+              <li><a class="dropdown-item" href="teacher-training.html">Teacher Training</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="cert-hero">
+  <div class="container">
+    <h1>Professional <span class="text-orange">Certifications</span></h1>
+    <p class="lead mt-3">Validate your expertise with globally recognized certifications across multiple domains</p>
+  </div>
+</section>
+
+<!-- Certification Categories -->
+<section class="container py-5">
+  <div class="section-header">
+    <span class="section-badge">CATEGORIES</span>
+    <h2 class="section-title">Choose Your <span class="text-orange">Domain</span></h2>
+    <p class="section-subtitle">Industry-recognized certifications from world's leading organizations</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=microsoft-fundamentals'">
+        <div class="category-icon">
+          <i class="fab fa-microsoft"></i>
+        </div>
+        <h4>Microsoft</h4>
+        <p class="text-muted small">Azure, AI, Data, Security, Power Platform</p>
+        <span class="badge bg-orange text-white">12+ Exams</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=adobe'">
+        <div class="category-icon">
+          <i class="fab fa-adobe"></i>
+        </div>
+        <h4>Adobe</h4>
+        <p class="text-muted small">Creative Cloud, Design, Video, Web</p>
+        <span class="badge bg-orange text-white">6+ Exams</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=cisco'">
+        <div class="category-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h4>Cisco</h4>
+        <p class="text-muted small">Networking, Cybersecurity, CCST</p>
+        <span class="badge bg-orange text-white">2 Exams</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=powerbi'">
+        <div class="category-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h4>Power BI</h4>
+        <p class="text-muted small">Data Analysis, Business Intelligence</p>
+        <span class="badge bg-orange text-white">PL-300</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=unity'">
+        <div class="category-icon">
+          <i class="fab fa-unity"></i>
+        </div>
+        <h4>Unity</h4>
+        <p class="text-muted small">Game Development, AR/VR, 3D</p>
+        <span class="badge bg-orange text-white">Certified User</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-card" onclick="location.href='cert-detail.html?id=pmi'">
+        <div class="category-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <h4>PMI</h4>
+        <p class="text-muted small">Project Management, Agile</p>
+        <span class="badge bg-orange text-white">Ready™</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Exams -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">POPULAR EXAMS</span>
+      <h2 class="section-title">Most Enrolled <span class="text-orange">Certifications</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fab fa-microsoft fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">AZ-900</h5>
+          </div>
+          <p class="text-muted small">Microsoft Azure Fundamentals - Cloud concepts, Azure services, pricing.</p>
+          <a href="cert-detail.html?id=microsoft-fundamentals" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fab fa-adobe fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">Photoshop</h5>
+          </div>
+          <p class="text-muted small">Adobe Certified Professional - Visual design and image editing mastery.</p>
+          <a href="cert-detail.html?id=adobe" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-chart-line fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">PL-300</h5>
+          </div>
+          <p class="text-muted small">Power BI Data Analyst - Data transformation, modeling, visualization.</p>
+          <a href="cert-detail.html?id=powerbi" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-shield-alt fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">CCST</h5>
+          </div>
+          <p class="text-muted small">Cisco Certified Support Technician - Networking & Cybersecurity.</p>
+          <a href="cert-detail.html?id=cisco" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-database fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">DP-900</h5>
+          </div>
+          <p class="text-muted small">Azure Data Fundamentals - Core data concepts, relational data.</p>
+          <a href="cert-detail.html?id=microsoft-fundamentals" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="exam-card">
+          <div class="d-flex align-items-center mb-3">
+            <i class="fas fa-gamepad fa-2x text-orange me-3"></i>
+            <h5 class="mb-0">Unity</h5>
+          </div>
+          <p class="text-muted small">Unity Certified User - Game development, C# scripting, AR/VR.</p>
+          <a href="cert-detail.html?id=unity" class="btn-outline-orange btn-sm w-100 text-center">View Details →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Get Certified -->
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <span class="section-badge">WHY CERTIFY?</span>
+      <h2 class="fw-bold mb-3">Benefits of <span class="text-orange">Professional Certification</span></h2>
+      <div class="d-flex gap-3 mb-3">
+        <i class="fas fa-chart-line text-orange fs-4"></i>
+        <div><strong>Higher Salary</strong><br><small class="text-muted">Certified professionals earn 20-30% more</small></div>
+      </div>
+      <div class="d-flex gap-3 mb-3">
+        <i class="fas fa-briefcase text-orange fs-4"></i>
+        <div><strong>Better Job Opportunities</strong><br><small class="text-muted">Stand out to top employers</small></div>
+      </div>
+      <div class="d-flex gap-3 mb-3">
+        <i class="fas fa-globe text-orange fs-4"></i>
+        <div><strong>Global Recognition</strong><br><small class="text-muted">Credentials accepted worldwide</small></div>
+      </div>
+      <div class="d-flex gap-3 mb-4">
+        <i class="fas fa-rocket text-orange fs-4"></i>
+        <div><strong>Career Growth</strong><br><small class="text-muted">Faster promotions and career advancement</small></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="bg-white rounded-4 p-4 shadow-lg">
+        <h4 class="fw-bold mb-3">Certification Statistics</h4>
+        <div class="mb-3">
+          <div class="d-flex justify-content-between"><span>Higher Salary</span><span class="text-orange fw-bold">87%</span></div>
+          <div class="progress mt-1" style="height: 8px;"><div class="progress-bar bg-orange" style="width: 87%"></div></div>
+        </div>
+        <div class="mb-3">
+          <div class="d-flex justify-content-between"><span>Better Job Offers</span><span class="text-orange fw-bold">92%</span></div>
+          <div class="progress mt-1" style="height: 8px;"><div class="progress-bar bg-orange" style="width: 92%"></div></div>
+        </div>
+        <div class="mb-3">
+          <div class="d-flex justify-content-between"><span>Employer Preference</span><span class="text-orange fw-bold">95%</span></div>
+          <div class="progress mt-1" style="height: 8px;"><div class="progress-bar bg-orange" style="width: 95%"></div></div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="contact.html" class="btn-orange">Talk to Advisor →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container my-5">
+  <div class="cta-section text-center">
+    <h2 class="text-white fw-bold mb-3">Ready to Get Certified?</h2>
+    <p class="text-white-50 mb-4 fs-5">Join thousands of successful professionals who advanced their careers</p>
+    <a href="contact.html" class="btn btn-light rounded-pill px-5 py-3 fw-bold text-dark-blue">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h6>UltraSage Learning</h6>
+        <p class="small">Empowering careers through global tech certifications since 2018.</p>
+        <p class="small mb-0">&copy; 2026 UltraSage Learning. All rights reserved.</p>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p class="small mb-1">OM Tower, Unit 706, 7th Floor<br>Shakespear Sarani, Park Street<br>Kolkata 700071</p>
+        <p class="small">+91 7980577946 | info@ultrasage.in</p>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="astrology.html">Astrology Certification</a></li>
+          <li><a href="teacher-training.html">Teacher Training</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

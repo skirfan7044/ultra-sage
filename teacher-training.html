@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Training | UltraSage Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .training-hero {
+      background: linear-gradient(135deg, #0a1a32 0%, #1a4a7a 50%, #164288 100%);
+    }
+    .module-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      border-bottom: 3px solid var(--orange);
+    }
+    .level-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+    }
+    .level-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .level-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--orange) 0%, #ff884d 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 1rem;
+    }
+    .instructor-card {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 28px;
+      transition: all 0.3s;
+    }
+    .instructor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="mainlogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon bg-white rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="certification.html">Certifications</a></li>
+              <li><a class="dropdown-item" href="astrology.html">Astrology</a></li>
+              <li><a class="dropdown-item" href="teacher-training.html">Teacher Training</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="training-hero" style="margin-top: 76px; padding: 100px 0 80px; color: white;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="badge bg-white text-dark-blue mb-3 py-2 px-3 rounded-pill">🎓 Teacher Training Certification</span>
+        <h1 class="fw-bold display-4">Become a Certified <span class="text-orange">Professional Trainer</span></h1>
+        <p class="lead mt-3 opacity-90">Master the art of teaching with our comprehensive teacher training program. Learn modern pedagogy, classroom management, and instructional design.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="#levels" class="btn-orange">View Programs <i class="fas fa-arrow-right ms-2"></i></a>
+          <a href="contact.html" class="btn-outline-white">Apply Now</a>
+        </div>
+        <div class="d-flex gap-4 mt-5">
+          <div><span class="fw-bold fs-3">2000+</span><br><span class="opacity-75">Teachers Trained</span></div>
+          <div><span class="fw-bold fs-3">3</span><br><span class="opacity-75">Certification Levels</span></div>
+          <div><span class="fw-bold fs-3">100%</span><br><span class="opacity-75">Placement Support</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-4 mt-lg-0">
+        <div class="bg-white p-4 rounded-4 shadow-lg text-center">
+          <i class="fas fa-chalkboard-user fa-4x text-orange mb-3"></i>
+          <h3 class="text-dark-blue">Next Batch</h3>
+          <div class="display-4 fw-bold text-orange mb-2">1 June 2026</div>
+          <p class="text-muted">Early bird discount: 20% off until 15 May</p>
+          <a href="contact.html" class="btn-orange w-100">Register Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certification Levels -->
+<section class="container py-5" id="levels">
+  <div class="section-header">
+    <span class="section-badge">CERTIFICATION LEVELS</span>
+    <h2 class="section-title">Choose Your <span class="text-orange">Pathway</span></h2>
+    <p class="section-subtitle">Progressive certification levels designed for different career stages</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="level-card">
+        <div class="level-number">1</div>
+        <h4>Associate Level</h4>
+        <div class="display-6 fw-bold text-orange my-3">₹15,000</div>
+        <p class="text-muted small">Duration: 3 Months</p>
+        <hr>
+        <ul class="list-unstyled text-start">
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Teaching Fundamentals</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Lesson Planning</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Classroom Management</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Assessment Basics</li>
+        </ul>
+        <a href="contact.html" class="btn-outline-orange w-100">Enroll Now</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="level-card" style="border: 2px solid var(--orange); position: relative;">
+        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--orange); color: white; padding: 4px 16px; border-radius: 50px; font-size: 0.75rem;">Most Popular</div>
+        <div class="level-number">2</div>
+        <h4>Professional Level</h4>
+        <div class="display-6 fw-bold text-orange my-3">₹35,000</div>
+        <p class="text-muted small">Duration: 6 Months</p>
+        <hr>
+        <ul class="list-unstyled text-start">
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Advanced Pedagogy</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Instructional Design</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Digital Teaching Tools</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Student Psychology</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Practicum & Mentoring</li>
+        </ul>
+        <a href="contact.html" class="btn-orange w-100">Enroll Now</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="level-card">
+        <div class="level-number">3</div>
+        <h4>Master Level</h4>
+        <div class="display-6 fw-bold text-orange my-3">₹55,000</div>
+        <p class="text-muted small">Duration: 12 Months</p>
+        <hr>
+        <ul class="list-unstyled text-start">
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Curriculum Development</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Train the Trainer</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Educational Leadership</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> Research Methodology</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-orange me-2"></i> International Certification</li>
+        </ul>
+        <a href="contact.html" class="btn-outline-orange w-100">Enroll Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <span class="section-badge">CURRICULUM</span>
+        <h2 class="fw-bold mb-3">What You'll <span class="text-orange">Learn</span></h2>
+        <div class="module-card">
+          <h5><i class="fas fa-book-open text-orange me-2"></i> Module 1: Foundations of Teaching</h5>
+          <p class="text-muted mb-0">Learning theories, educational psychology, and understanding learner needs.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-clipboard-list text-orange me-2"></i> Module 2: Lesson Planning & Design</h5>
+          <p class="text-muted mb-0">Creating effective lesson plans, learning objectives, and assessment strategies.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-chalkboard text-orange me-2"></i> Module 3: Classroom Management</h5>
+          <p class="text-muted mb-0">Managing diverse classrooms, handling challenging situations, and creating positive learning environments.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-laptop-code text-orange me-2"></i> Module 4: Digital Teaching Tools</h5>
+          <p class="text-muted mb-0">LMS platforms, online teaching tools, and blended learning strategies.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="module-card">
+          <h5><i class="fas fa-chart-simple text-orange me-2"></i> Module 5: Assessment & Evaluation</h5>
+          <p class="text-muted mb-0">Formative and summative assessment, grading strategies, and feedback techniques.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-users text-orange me-2"></i> Module 6: Student Psychology</h5>
+          <p class="text-muted mb-0">Understanding student behavior, motivation, and learning styles.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-microphone-alt text-orange me-2"></i> Module 7: Communication Skills</h5>
+          <p class="text-muted mb-0">Effective presentation, public speaking, and interpersonal communication.</p>
+        </div>
+        <div class="module-card">
+          <h5><i class="fas fa-briefcase text-orange me-2"></i> Module 8: Professional Development</h5>
+          <p class="text-muted mb-0">Resume building, interview preparation, and career guidance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Master Trainers -->
+<section class="container py-5">
+  <div class="section-header">
+    <span class="section-badge">MASTER TRAINERS</span>
+    <h2 class="section-title">Learn from <span class="text-orange">Industry Experts</span></h2>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="instructor-card">
+        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 120px; height: 120px;">
+          <i class="fas fa-user-tie fa-4x text-orange"></i>
+        </div>
+        <h5>Dr. Anil Mehta</h5>
+        <p class="text-orange small">PhD in Education, 30+ Years</p>
+        <p class="text-muted small">Former Dean at Delhi University, specializes in curriculum design.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="instructor-card">
+        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 120px; height: 120px;">
+          <i class="fas fa-chalkboard-user fa-4x text-orange"></i>
+        </div>
+        <h5>Prof. Neha Singh</h5>
+        <p class="text-orange small">M.Ed., 20+ Years</p>
+        <p class="text-muted small">Expert in educational technology and online teaching methodologies.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="instructor-card">
+        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 120px; height: 120px;">
+          <i class="fas fa-brain fa-4x text-orange"></i>
+        </div>
+        <h5>Dr. Vikram Joshi</h5>
+        <p class="text-orange small">Educational Psychologist, 25+ Years</p>
+        <p class="text-muted small">Specializes in student psychology and learning behavior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Opportunities -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">CAREER OPPORTUNITIES</span>
+      <h2 class="section-title">Where Our <span class="text-orange">Graduates Work</span></h2>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-md-3 col-6">
+        <i class="fas fa-school fa-3x text-orange mb-2"></i>
+        <h6>Schools</h6>
+        <small class="text-muted">K-12 & Higher Ed</small>
+      </div>
+      <div class="col-md-3 col-6">
+        <i class="fas fa-chalkboard fa-3x text-orange mb-2"></i>
+        <h6>Coaching Centers</h6>
+        <small class="text-muted">Private Tutoring</small>
+      </div>
+      <div class="col-md-3 col-6">
+        <i class="fas fa-laptop fa-3x text-orange mb-2"></i>
+        <h6>EdTech Companies</h6>
+        <small class="text-muted">Online Teaching</small>
+      </div>
+      <div class="col-md-3 col-6">
+        <i class="fas fa-globe fa-3x text-orange mb-2"></i>
+        <h6>Freelance</h6>
+        <small class="text-muted">Independent Trainer</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container my-5">
+  <div class="cta-section text-center">
+    <h2 class="text-white fw-bold mb-3">Shape the Future - Become a Teacher</h2>
+    <p class="text-white-50 mb-4 fs-5">Join our teacher training program and inspire the next generation</p>
+    <a href="contact.html" class="btn btn-light rounded-pill px-5 py-3 fw-bold text-dark-blue">Apply Now <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h6>UltraSage Learning</h6>
+        <p class="small">Empowering careers through global tech certifications since 2018.</p>
+        <p class="small mb-0">&copy; 2026 UltraSage Learning. All rights reserved.</p>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p class="small mb-1">OM Tower, Unit 706, 7th Floor<br>Shakespear Sarani, Park Street<br>Kolkata 700071</p>
+        <p class="small">+91 7980577946 | info@ultrasage.in</p>
+        <a href="https://wa.link/y7tf9x" class="text-white-50"><i class="fab fa-whatsapp text-orange me-1"></i> WhatsApp Us</a>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="certification.html">Certifications</a></li>
+          <li><a href="astrology.html">Astrology Certification</a></li>
+          <li><a href="teacher-training.html">Teacher Training</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

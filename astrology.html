@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astrology Services | UltraSage Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .astrology-hero {
+      background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #164288 100%);
+    }
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      height: 100%;
+      cursor: pointer;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(255,102,0,0.1) 0%, rgba(138,43,226,0.05) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+    .service-icon i {
+      font-size: 2.5rem;
+      color: var(--orange);
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .astrologer-card {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 28px;
+      transition: all 0.3s;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .astrologer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .testimonial-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--orange);
+    }
+    .rating i {
+      color: #ffc107;
+      font-size: 0.9rem;
+    }
+    .consultation-form {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+    .astro-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--orange);
+      padding: 4px;
+    }
+    .gallery-img {
+      border-radius: 20px;
+      transition: all 0.3s;
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-img {
+      border-radius: 28px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-modern fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="mainlogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon bg-white rounded"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="certification.html">Certifications</a></li>
+              <li><a class="dropdown-item" href="astrology.html">Astrology</a></li>
+              <li><a class="dropdown-item" href="teacher-training.html">Teacher Training</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="astrology-hero" style="margin-top: 76px; padding: 100px 0 80px; color: white;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="badge bg-white text-dark-blue mb-3 py-2 px-3 rounded-pill">✨ Astrology Services</span>
+        <h1 class="fw-bold display-4">Discover Your <span class="text-orange">Destiny</span> with Vedic Astrology</h1>
+        <p class="lead mt-3 opacity-90">Get accurate predictions, personalized remedies, and guidance from India's top astrologers for career, love, finance, health, and more.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="#consultation" class="btn-orange">Book Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+          <a href="#services" class="btn-outline-white">Explore Services</a>
+        </div>
+        <div class="d-flex gap-4 mt-5">
+          <div><span class="fw-bold fs-3">10,000+</span><br><span class="opacity-75">Happy Clients</span></div>
+          <div><span class="fw-bold fs-3">15+</span><br><span class="opacity-75">Years Experience</span></div>
+          <div><span class="fw-bold fs-3">98%</span><br><span class="opacity-75">Satisfaction Rate</span></div>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-4 mt-lg-0">
+        <img src="https://placehold.co/500x400/ff6600/white?text=Vedic+Astrology" alt="Astrology" class="hero-img shadow-lg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="container py-5" id="services">
+  <div class="section-header">
+    <span class="section-badge">WHAT WE OFFER</span>
+    <h2 class="section-title">Our <span class="text-orange">Astrology Services</span></h2>
+    <p class="section-subtitle">Comprehensive astrological solutions for every aspect of your life</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h4>Birth Chart Analysis</h4>
+        <p class="text-muted small">Detailed analysis of your Kundli to understand your strengths, weaknesses, and life path.</p>
+        <span class="price-badge">₹999</span>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h4>Love & Marriage</h4>
+        <p class="text-muted small">Compatibility analysis, marriage timing, and solutions for relationship issues.</p>
+        <span class="price-badge">₹1,299</span>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h4>Career & Business</h4>
+        <p class="text-muted small">Career guidance, business growth predictions, job change timing.</p>
+        <span class="price-badge">₹1,199</span>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-rupee-sign"></i>
+        </div>
+        <h4>Finance & Wealth</h4>
+        <p class="text-muted small">Wealth predictions, investment timing, and financial remedies.</p>
+        <span class="price-badge">₹1,099</span>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h4>Gemstone Recommendation</h4>
+        <p class="text-muted small">Personalized gemstone suggestions based on your planetary positions.</p>
+        <span class="price-badge">₹799</span>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="service-card" onclick="location.href='#consultation'">
+        <div class="service-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h4>Muhurta (Auspicious Dates)</h4>
+        <p class="text-muted small">Best dates for weddings, house warming, business launch, travel.</p>
+        <span class="price-badge">₹699</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">GALLERY</span>
+      <h2 class="section-title">Astrology <span class="text-orange">Moments</span></h2>
+      <p class="section-subtitle">Glimpses of our astrological consultations and events</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/164288/white?text=Kundli+Analysis" alt="Kundli Analysis" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/ff6600/white?text=Gemstone+Recommendation" alt="Gemstone Recommendation" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/2d1b4e/white?text=Remedies+Session" alt="Remedies Session" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/1a0a2e/white?text=Birth+Chart+Reading" alt="Birth Chart Reading" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/2272b7/white?text=Client+Consultation" alt="Client Consultation" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/400x300/ff884d/white?text=Vedic+Rituals" alt="Vedic Rituals" class="gallery-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Astrologer - Subhajit Podder Only -->
+<section class="container py-5">
+  <div class="section-header">
+    <span class="section-badge">OUR ASTROLOGER</span>
+    <h2 class="section-title">Meet <span class="text-orange">Subhajit Podder</span></h2>
+    <p class="section-subtitle">Trusted Vedic Astrologer with 15+ years of experience</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="astrologer-card">
+        <img src="https://placehold.co/300x300/164288/white?text=Subhajit+Podder" alt="Subhajit Podder" class="astro-image mb-3">
+        <h3 class="fw-bold">Subhajit Podder</h3>
+        <p class="text-orange">Senior Vedic Astrologer | 15+ Years Experience</p>
+        <div class="rating mb-3">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span class="text-muted ms-1">(4.9/5 from 2,500+ clients)</span>
+        </div>
+        <p class="text-muted">Specializes in Birth Chart Analysis, Career Astrology, Love & Marriage, Financial Astrology, and Remedial Solutions. Provides accurate predictions with practical remedies based on authentic Vedic principles.</p>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <span class="badge bg-orange text-white p-2">Vedic Expert</span>
+          <span class="badge bg-orange text-white p-2">Palmistry</span>
+          <span class="badge bg-orange text-white p-2">Numerology</span>
+        </div>
+        <a href="#consultation" class="btn-orange mt-4 d-inline-block">Book Consultation with Subhajit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">TESTIMONIALS</span>
+      <h2 class="section-title">What Our <span class="text-orange">Clients Say</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="rating mb-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-muted">"Subhajit's predictions were incredibly accurate. He helped me navigate a difficult career transition. Highly recommend!"</p>
+          <div class="d-flex align-items-center mt-3">
+            <img src="https://placehold.co/50x50/ff6600/white?text=RM" class="rounded-circle me-2" style="width: 45px; height: 45px; object-fit: cover;">
+            <div><strong>Rahul Mehta</strong><br><small class="text-muted">IT Professional</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="rating mb-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-muted">"My marriage was delayed for years. Subhajit suggested remedies and predicted the right time. Got married within 6 months!"</p>
+          <div class="d-flex align-items-center mt-3">
+            <img src="https://placehold.co/50x50/164288/white?text=NG" class="rounded-circle me-2" style="width: 45px; height: 45px; object-fit: cover;">
+            <div><strong>Neha Gupta</strong><br><small class="text-muted">Homemaker</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <div class="rating mb-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-muted">"The gemstone recommendation changed my life. My business started growing within weeks. Thank you Subhajit ji!"</p>
+          <div class="d-flex align-items-center mt-3">
+            <img src="https://placehold.co/50x50/2d1b4e/white?text=AS" class="rounded-circle me-2" style="width: 45px; height: 45px; object-fit: cover;">
+            <div><strong>Amit Singh</strong><br><small class="text-muted">Business Owner</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Consultation Form -->
+<section class="container py-5" id="consultation">
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <div class="consultation-form">
+        <h3 class="fw-bold mb-4"><i class="fas fa-calendar-check text-orange me-2"></i> Book Consultation with Subhajit Podder</h3>
+        <form id="astroForm" onsubmit="return bookConsultation(event)">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name *</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email Address *</label>
+            <input type="email" class="form-control" id="email" required placeholder="your@email.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Phone Number *</label>
+            <input type="tel" class="form-control" id="phone" required placeholder="+91 XXXXXXXXXX">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Select Service *</label>
+            <select class="form-select" id="service" required>
+              <option value="">-- Choose a service --</option>
+              <option>Birth Chart Analysis - ₹999</option>
+              <option>Love & Marriage - ₹1,299</option>
+              <option>Career & Business - ₹1,199</option>
+              <option>Finance & Wealth - ₹1,099</option>
+              <option>Gemstone Recommendation - ₹799</option>
+              <option>Muhurta (Auspicious Dates) - ₹699</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Date of Birth (for accurate analysis)</label>
+            <input type="date" class="form-control" id="dob">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Your Question / Concern</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Briefly describe what you need guidance on..."></textarea>
+          </div>
+          <button type="submit" class="btn-orange w-100">Book Consultation →</button>
+        </form>
+        <div id="astroSuccess" class="alert alert-success mt-3" style="display: none;">
+          <i class="fas fa-check-circle me-2"></i> Thank you! Subhajit Podder will contact you within 24 hours to confirm your consultation.
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="bg-white rounded-4 p-4 shadow-sm h-100">
+        <img src="https://placehold.co/600x400/164288/white?text=Consultation+Booking" alt="Consultation" class="img-fluid rounded-4 mb-4" style="width: 100%; height: 200px; object-fit: cover;">
+        <h4 class="fw-bold mb-3"><i class="fas fa-clock text-orange me-2"></i> Why Choose Subhajit Podder?</h4>
+        <div class="d-flex mb-3">
+          <i class="fas fa-check-circle text-orange fs-4 me-3"></i>
+          <div><strong>100% Accurate Predictions</strong><br><small class="text-muted">Based on authentic Vedic calculations</small></div>
+        </div>
+        <div class="d-flex mb-3">
+          <i class="fas fa-check-circle text-orange fs-4 me-3"></i>
+          <div><strong>15+ Years Experience</strong><br><small class="text-muted">Thousands of satisfied clients</small></div>
+        </div>
+        <div class="d-flex mb-3">
+          <i class="fas fa-check-circle text-orange fs-4 me-3"></i>
+          <div><strong>Confidential & Private</strong><br><small class="text-muted">Your personal information is 100% secure</small></div>
+        </div>
+        <div class="d-flex mb-3">
+          <i class="fas fa-check-circle text-orange fs-4 me-3"></i>
+          <div><strong>Follow-up Support</strong><br><small class="text-muted">Free follow-up within 15 days</small></div>
+        </div>
+        <hr>
+        <div class="text-center mt-3">
+          <i class="fab fa-whatsapp fa-2x text-orange me-3"></i>
+          <i class="fab fa-telegram fa-2x text-orange me-3"></i>
+          <i class="fas fa-phone-alt fa-2x text-orange"></i>
+          <p class="mt-2 text-muted small">Call or WhatsApp: +91 7980577946</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Horoscope Section -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">DAILY HOROSCOPE</span>
+      <h2 class="section-title">Get Your <span class="text-orange">Daily Horoscope</span></h2>
+    </div>
+    <div class="row g-3 text-center">
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-ram fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Aries</h6>
+          <small>Mar 21 - Apr 19</small>
+        </div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-bull fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Taurus</h6>
+          <small>Apr 20 - May 20</small>
+        </div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-gem fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Gemini</h6>
+          <small>May 21 - Jun 20</small>
+        </div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-crab fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Cancer</h6>
+          <small>Jun 21 - Jul 22</small>
+        </div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-lion fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Leo</h6>
+          <small>Jul 23 - Aug 22</small>
+        </div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="p-3 bg-light rounded-4 shadow-sm">
+          <i class="fas fa-child fa-2x text-orange mb-2"></i>
+          <h6 class="mb-0">Virgo</h6>
+          <small>Aug 23 - Sep 22</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container my-5">
+  <div class="cta-section text-center">
+    <img src="https://placehold.co/1200x200/ffffff/ff6600?text=Get+Your+Personalized+Astrology+Guidance" alt="CTA" class="img-fluid rounded-4 mb-4" style="max-height: 150px; width: 100%; object-fit: cover;">
+    <h2 class="text-white fw-bold mb-3">Still Have Questions About Your Life?</h2>
+    <p class="text-white-50 mb-4 fs-5">Talk to Subhajit Podder today and get clarity on your future</p>
+    <a href="#consultation" class="btn btn-light rounded-pill px-5 py-3 fw-bold text-dark-blue">Book Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h6>UltraSage Learning</h6>
+        <p class="small">Empowering lives through Vedic astrology and professional certifications since 2018.</p>
+        <p class="small mb-0">&copy; 2026 UltraSage Learning. All rights reserved.</p>
+      </div>
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p class="small mb-1">OM Tower, Unit 706, 7th Floor<br>Shakespear Sarani, Park Street<br>Kolkata 700071</p>
+        <p class="small">+91 7980577946 | info@ultrasage.in</p>
+        <a href="https://wa.link/y7tf9x" class="text-white-50"><i class="fab fa-whatsapp text-orange me-1"></i> WhatsApp Us</a>
+      </div>
+      <div class="col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="astrology.html">Astrology Services</a></li>
+          <li><a href="teacher-training.html">Teacher Training</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function bookConsultation(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    if (!name || !email || !phone) {
+      alert('Please fill all required fields.');
+      return false;
+    }
+    
+    document.getElementById('astroSuccess').style.display = 'block';
+    document.getElementById('astroForm').reset();
+    
+    setTimeout(() => {
+      document.getElementById('astroSuccess').style.display = 'none';
+    }, 5000);
+    
+    return false;
+  }
+</script>
+</body>
+</html>
