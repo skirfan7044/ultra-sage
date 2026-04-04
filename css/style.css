@@ -58,6 +58,7 @@ h6 {
 }
 .text-dark-blue {
   color: var(--dark-blue);
+  animation: zoomin 1s infinite ease-in-out alternate;
 }
 .text-secondary {
   color: var(--text-muted);
@@ -223,7 +224,7 @@ h6 {
   min-height: 90px;
   background: #fff !important;
   backdrop-filter: blur(12px);
-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   padding: 12px 0;
 }
 
@@ -986,14 +987,15 @@ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 /* Responsive */
 @media (max-width: 768px) {
-    .mainlogo {
-  width: 55px;
-} 
-    .navbar-modern .nav-link.active::after {
-        display: none;
-    }.navbar-collapse {
-        padding-top: 40px;
-    }
+  .mainlogo {
+    width: 55px;
+  }
+  .navbar-modern .nav-link.active::after {
+    display: none;
+  }
+  .navbar-collapse {
+    padding-top: 40px;
+  }
   .hero-title {
     font-size: 2.3rem;
   }
