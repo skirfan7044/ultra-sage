@@ -822,7 +822,7 @@ h6 {
 
 .partner-logo {
   filter: grayscale(0.3);
-  opacity: 0.7;
+  opacity: 0.9;
   transition: all 0.3s;
   max-height: 50px;
 }
@@ -1205,6 +1205,20 @@ h6 {
 .btn-service {
   margin-top: 1.5rem;
   width: 100%;
+}
+
+.btn-outline-cert {
+  text-decoration: none;
+  color: var(--dark-blue);
+  border: solid 1px var(--dark-blue);
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn-outline-cert:hover {
+  background: var(--dark-blue);
+  color: var(--white);
 }
 
 /* Responsive */
