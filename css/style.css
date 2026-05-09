@@ -964,7 +964,8 @@ h6 {
 .footer-modern h6 {
   color: white;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1.2rem;
 }
 
 .footer-modern a {
